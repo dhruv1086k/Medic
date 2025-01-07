@@ -24,12 +24,12 @@ export default function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200"
+              className="border border-indigo-500 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200"
             >
               <details className="group p-4">
                 <summary className="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
                   {faq.question}
-                  <span className="text-indigo-500 group-open:rotate-45 transition-transform">
+                  <span className="text-4xl text-indigo-500 group-open:rotate-45 transition-transform">
                     +
                   </span>
                 </summary>

@@ -1,4 +1,5 @@
 import Cards from "../../components/Cards/Cards";
+import FAQSection from "../../components/FAQ/Faq";
 import Slider from "../../components/testiSlider/Slider";
 
 export default function Home() {
@@ -108,8 +109,11 @@ export default function Home() {
         <span className="text-indigo-500 text-5xl uppercase tracking-wider font-bold">
           Dr. Rashmi's Articles
         </span>
-        <h2 className="text-2xl font-semibold pt-2 pb-10 text-[#555]">ON NOTION</h2>
+        <h2 className="text-2xl font-semibold pt-2 pb-10 text-gray-500">
+          on notion
+        </h2>
       </div>
+
       <div className="px-10 flex flex-wrap justify-center items-center gap-10">
         {CardData?.map((item) => (
           <Cards
@@ -120,7 +124,17 @@ export default function Home() {
           />
         ))}
       </div>
-      
+
+      <div className="text-center mt-32">
+        <h2 className="text-4xl font-bold text-indigo-500">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-gray-500 mt-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+          nonumy eirmod tempor Lorem.
+        </p>
+      </div>
+      <FAQSection />
     </>
   );
 }
