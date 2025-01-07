@@ -1,3 +1,4 @@
+import AppointmentSection from "../../components/appointment/Appointment";
 import Cards from "../../components/Cards/Cards";
 import FAQSection from "../../components/FAQ/Faq";
 import Slider from "../../components/testiSlider/Slider";
@@ -135,6 +136,7 @@ export default function Home() {
         </p>
       </div>
       <FAQSection />
+      <AppointmentSection />
     </>
   );
 }
