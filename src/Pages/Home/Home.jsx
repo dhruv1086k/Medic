@@ -1,6 +1,52 @@
+import Cards from "../../components/Cards/Cards";
 import Slider from "../../components/testiSlider/Slider";
 
 export default function Home() {
+  const CardData = [
+    {
+      head: "Emotional Burnout",
+      content: "Understanding Emotional Burnout: Causes and Remedies",
+      author: "Dr. Rashmi",
+      img: "/Cards/img1.webp",
+    },
+    {
+      head: "Family Conflicts",
+      content: "Managing Family Conflicts: Tips for a Harmonious Home",
+      author: "Dr. Rashmi",
+      img: "/Cards/img2.webp",
+    },
+    {
+      head: "Mental Wellness",
+      content: "How to Start Your Mental Wellness Journey",
+      author: "Dr. Rashmi",
+      img: "/Cards/img3.webp",
+    },
+    {
+      head: "Anxiety",
+      content: "10 Common Signs of Anxiety You Shouldn’t Ignore",
+      author: "Dr. Rashmi",
+      img: "/Cards/img4.webp",
+    },
+    {
+      head: "Mental Health",
+      content: "Breaking the Stigma: Mental Health in India",
+      author: "Dr. Rashmi",
+      img: "/Cards/img5.webp",
+    },
+    {
+      head: "Mental Health",
+      content: "Breaking the Stigma: Mental Health in India",
+      author: "Dr. Rashmi",
+      img: "/Cards/img5.webp",
+    },
+    {
+      head: "Mental Health",
+      content: "Breaking the Stigma: Mental Health in India",
+      author: "Dr. Rashmi",
+      img: "/Cards/img5.webp",
+    },
+  ];
+
   return (
     <>
       <div className="flex w-full h-screen px-32">
@@ -58,6 +104,23 @@ export default function Home() {
         </h2>
       </div>
       <Slider />
+      <div className="text-center mb-8 mt-10">
+        <span className="text-indigo-500 text-5xl uppercase tracking-wider font-bold">
+          Dr. Rashmi's Articles
+        </span>
+        <h2 className="text-2xl font-semibold pt-2 pb-10 text-[#555]">ON NOTION</h2>
+      </div>
+      <div className="px-10 flex flex-wrap justify-center items-center gap-10">
+        {CardData?.map((item) => (
+          <Cards
+            head={item.head}
+            img={item.img}
+            content={item.content}
+            author={item.author}
+          />
+        ))}
+      </div>
+      
     </>
   );
 }
