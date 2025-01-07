@@ -1,7 +1,33 @@
 export default function AppointmentSection() {
   return (
-    <div id="appointment" className="flex flex-col lg:flex-row items-center lg:items-start justify-between max-w-6xl mx-auto py-16 px-6 relative">
-      <div className="bg-white shadow-lg rounded-lg p-6 w-full lg:w-1/3">
+    <div
+      id="appointment"
+      className="flex flex-col lg:flex-row items-center lg:items-start justify-between max-w-6xl mx-auto py-16 px-6"
+    >
+      <div className="lg:ml-12 mt-12 lg:mt-0 text-center lg:text-left lg:w-1/2">
+        <div>
+          <h2 className="text-4xl font-bold text-gray-800 leading-snug">
+            Lorem ipsum dolor sit amet,
+            <br />
+            consectetur
+          </h2>
+          <p className="text-gray-600 mt-4 w-[90%]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+            nonumy eirmod tempor Lorem ipsum dolor sit amet consectetur
+            adipiscing elitr.
+          </p>
+          <div className="mt-5">
+            <h4 className="text-xl text-gray-800 font-bold">Address</h4>
+            <p className="text-gray-600">
+              439 Main St
+              <br />
+              Port Washington, New York <br />
+              11050
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white shadow-lg rounded-lg p-6 py-10 w-full lg:w-1/2">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
           Book an Appointment
         </h2>
@@ -40,29 +66,6 @@ export default function AppointmentSection() {
             Book Appointment
           </button>
         </form>
-      </div>
-
-      <div className="lg:ml-12 mt-12 lg:mt-0 text-center lg:text-left lg:w-2/3">
-        <div>
-          <h2 className="text-4xl font-bold text-gray-800 leading-snug">
-            Lorem ipsum <br />
-            dolor sit amet,
-            <br />
-            consectetur
-          </h2>
-          <p className="text-gray-600 mt-4 w-1/2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
-            nonumy eirmod tempor Lorem ipsum dolor sit amet consectetur
-            adipiscing elitr.
-          </p>
-        </div>
-        <div className="mt-8 absolute bottom-0 right-0">
-          <img
-            src="/Appointment/doctorGirl.png"
-            alt="Doctor"
-            className="inline-block max-w-96 rounded-lg"
-          />
-        </div>
       </div>
     </div>
   );

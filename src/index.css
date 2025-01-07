@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -17,4 +17,46 @@ body {
 
 .poppins {
   font-family: "Poppins", serif;
+}
+
+@layer utilities {
+  .text-gold {
+    color: #d7a449;
+  }
+  .bg-gold {
+    background-color: #d7a449;
+  }
+  .bg-pattern {
+    background: url("https://i.ibb.co/DKn55Qz/pattern-1.jpg") repeat;
+  }
+}
+
+.stripParent:hover .second {
+  transform: translateX(0);
+}
+
+.glow1 {
+  top: -10%;
+  left: -10%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 
+    0 0 300px rgba(0, 145, 255, 0.9), 
+    0 0 150px rgba(106, 0, 255, 0.8), 
+    0 0 400px rgba(0, 145, 255, 0.8), 
+    0 0 200px rgba(106, 0, 255, 0.7);
+  border-radius: 50%;
+}
+
+.glow2 {
+  bottom: -10%;
+  right: -10%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 
+    0 0 300px rgba(0, 145, 255, 0.9), 
+    0 0 150px rgba(255, 0, 251, 0.8), 
+    0 0 400px rgba(0, 145, 255, 0.8), 
+    0 0 200px rgba(255, 0, 251, 0.8);
+  border-radius: 50%;
 }

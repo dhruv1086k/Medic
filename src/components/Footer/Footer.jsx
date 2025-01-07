@@ -128,7 +128,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="border-t border-gray-200 mt-8 pt-4 text-center text-sm text-gray-600">
-          <a className="hover:text-blue-500 mx-4">
+          <a className="mx-4">
             Copyright © 2025 | mentalhealthspace | All rights reserved.
           </a>
         </div>

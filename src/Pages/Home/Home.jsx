@@ -1,7 +1,6 @@
 import AppointmentSection from "../../components/appointment/Appointment";
 import Cards from "../../components/Cards/Cards";
 import FAQSection from "../../components/FAQ/Faq";
-import Footer from "../../components/Footer/Footer";
 import Slider from "../../components/testiSlider/Slider";
 
 export default function Home() {
@@ -53,7 +52,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex w-full h-screen px-32">
+      <div id="home" className="flex w-full h-screen px-32">
         <div className="w-1/2 h-full relative">
           <h1 className="text-5xl mt-60 poppins font-medium leading-tight">
             Complete Health Care Solution for Everyone
@@ -64,42 +63,44 @@ export default function Home() {
             laboriosam odio at eaque provident enim voluptate? Laboriosam
             fugiat, sapiente voluptas atque beatae omnis.
           </h5>
-          <a href="#appointment" className="">
-            <button className="bg-indigo-500 text-white py-3 px-5 rounded hover:bg-indigo-600">
-              Book Appointment
-            </button>
-          </a>
+          <div className="flex justify-center items-center">
+            <a href="#appointment">
+              <button className="bg-indigo-500 text-white py-3 px-5 rounded hover:bg-indigo-600">
+                Book Appointment
+              </button>
+            </a>
+          </div>
 
           {/* bottom stip */}
-          <div className="absolute bottom-1 left-0 w-full rounded-e-full bg-indigo-500 text-white flex justify-between py-2 px-2 pr-5">
-            <div className="flex flex-col">
-              <span className="text-4xl font-bold">24/7</span>
-              <span className="text-sm">Online Support</span>
+          <div className="stripParent overflow-hidden rounded-xl flex gap-2 w-auto relative top-44 left-0">
+            <div className="first w-[100px] rounded-xl bg-indigo-500 text-white flex justify-center items-center text-4xl z-10 hover-trigger">
+              &#10148;
             </div>
-            <hr />
-            <div className="flex flex-col">
-              <span className="text-4xl font-bold">100+</span>
-              <span className="text-sm">Doctors</span>
-            </div>
-            <hr />
-            <div className="flex flex-col">
-              <span className="text-4xl font-bold">1M+</span>
-              <span className="text-sm">Active Patients</span>
+            <div className="second w-[100%] overflow-hidden rounded-xl bg-indigo-500 text-white flex justify-between p-2 px-5 transition-transform duration-500 -translate-x-[120%]">
+              <div className="flex flex-col">
+                <span className="text-4xl font-bold">24/7</span>
+                <span className="text-sm">Online Support</span>
+              </div>
+              <hr />
+              <div className="flex flex-col">
+                <span className="text-4xl font-bold">100+</span>
+                <span className="text-sm">Doctors</span>
+              </div>
+              <hr />
+              <div className="flex flex-col">
+                <span className="text-4xl font-bold">1M+</span>
+                <span className="text-sm">Active Patients</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* right images-doctor, semicircle */}
-        <div className="w-1/2 h-full relative">
+        {/* right images-doctor */}
+        <div className="w-1/2 h-full flex justify-center items-center">
           <img
             src="/doctor.png"
             alt=""
-            className="absolute h-auto w-full left-1/2 bottom-0 -translate-x-1/2 z-10"
-          />
-          <img
-            src="/hero_backdrop.png"
-            alt=""
-            className="absolute w-[90%] left-1/2 bottom-0 -translate-x-1/2 z-0"
+            className="h-auto w-[80%] rounded-3xl"
           />
         </div>
       </div>
@@ -153,9 +154,6 @@ export default function Home() {
 
       {/* Appointment Section */}
       <AppointmentSection />
-
-      {/* Footer section */}
-      <Footer />
     </>
   );
 }
