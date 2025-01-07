@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import Slider from "../../components/testiSlider/Slider";
 
 export default function Home() {
+  // article cards data
   const CardData = [
     {
       head: "Emotional Burnout",
@@ -54,7 +55,7 @@ export default function Home() {
     <>
       <div className="flex w-full h-screen px-32">
         <div className="w-1/2 h-full relative">
-          <h1 className="text-5xl mt-40 poppins font-medium leading-tight">
+          <h1 className="text-5xl mt-60 poppins font-medium leading-tight">
             Complete Health Care Solution for Everyone
           </h1>
           <h5 className="text-base mt-8 mb-10">
@@ -63,12 +64,14 @@ export default function Home() {
             laboriosam odio at eaque provident enim voluptate? Laboriosam
             fugiat, sapiente voluptas atque beatae omnis.
           </h5>
-          <a href="#" className="">
+          <a href="#appointment" className="">
             <button className="bg-indigo-500 text-white py-3 px-5 rounded hover:bg-indigo-600">
               Book Appointment
             </button>
           </a>
-          <div className="absolute bottom-[10vh] left-0 w-full rounded-e-full bg-indigo-500 text-white flex justify-between py-2 px-2 pr-5">
+
+          {/* bottom stip */}
+          <div className="absolute bottom-1 left-0 w-full rounded-e-full bg-indigo-500 text-white flex justify-between py-2 px-2 pr-5">
             <div className="flex flex-col">
               <span className="text-4xl font-bold">24/7</span>
               <span className="text-sm">Online Support</span>
@@ -85,20 +88,24 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* right images-doctor, semicircle */}
         <div className="w-1/2 h-full relative">
           <img
             src="/doctor.png"
             alt=""
-            className="absolute h-auto w-full left-1/2 bottom-[9vh] -translate-x-1/2 z-10"
+            className="absolute h-auto w-full left-1/2 bottom-0 -translate-x-1/2 z-10"
           />
           <img
             src="/hero_backdrop.png"
             alt=""
-            className="absolute w-[90%] left-1/2 bottom-[9vh] -translate-x-1/2 z-0"
+            className="absolute w-[90%] left-1/2 bottom-0 -translate-x-1/2 z-0"
           />
         </div>
       </div>
-      <div className="text-center mb-8">
+
+      {/* testimonials section */}
+      <div id="testimonials" className="text-center mt-24 mb-8">
         <span className="text-indigo-500 text-5xl uppercase tracking-wider font-bold">
           Testimonials
         </span>
@@ -106,7 +113,11 @@ export default function Home() {
           Happy Clients & Feedbacks
         </h2>
       </div>
+
+      {/* testimonial slider */}
       <Slider />
+
+      {/* article section */}
       <div className="text-center mb-8 mt-10">
         <span className="text-indigo-500 text-5xl uppercase tracking-wider font-bold">
           Dr. Rashmi's Articles
@@ -116,6 +127,7 @@ export default function Home() {
         </h2>
       </div>
 
+      {/* article cards */}
       <div className="px-10 flex flex-wrap justify-center items-center gap-10">
         {CardData?.map((item) => (
           <Cards
@@ -127,7 +139,8 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="text-center mt-32">
+      {/* FAQ's section */}
+      <div id="faq" className="text-center mt-32">
         <h2 className="text-4xl font-bold text-indigo-500">
           Frequently Asked Questions
         </h2>
@@ -137,7 +150,11 @@ export default function Home() {
         </p>
       </div>
       <FAQSection />
+
+      {/* Appointment Section */}
       <AppointmentSection />
+
+      {/* Footer section */}
       <Footer />
     </>
   );

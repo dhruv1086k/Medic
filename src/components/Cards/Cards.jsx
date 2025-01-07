@@ -8,7 +8,7 @@ const Cards = ({ head, img, content, author }) => {
       </div>
 
       <div className="pt-6 border-b border-[#2c3a4c] mb-4">
-        <a href="#" className="hover:text-teal-400 transition-colors">
+        <a href="#" className="hover:text-indigo-400 transition-colors">
           <h3 className="text-2xl font-medium mb-4">{head}</h3>
         </a>
         <p className="text-[#8bacda] text-md mb-6 leading-relaxed">
