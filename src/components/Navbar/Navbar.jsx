@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all rounded-b-2xl py-5 duration-300 ${
-          isScrolled ? "bg-gray-900 shadow-xl shadow-gray-600" : "bg-transparent"
+          isScrolled ? "bg-gray-900 shadow-xl shadow-gray-500" : "bg-transparent"
         }`}
       >
         <div className="container mx-auto flex justify-between items-center px-6">
@@ -56,7 +56,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://medium.com/@rashmi.psychology"
                   className={` hover:text-indigo-600 font-medium ${
                     isScrolled ? "text-white" : "text-gray-800"
                   }`}
