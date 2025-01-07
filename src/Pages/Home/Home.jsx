@@ -1,3 +1,5 @@
+import Slider from "../../components/testiSlider/Slider";
+
 export default function Home() {
   return (
     <>
@@ -35,10 +37,27 @@ export default function Home() {
           </div>
         </div>
         <div className="w-1/2 h-full relative">
-          <img src="/doctor.png" alt="" className="absolute" />
-          <img src="/hero_backdrop.png" alt="" className="absolute" />
+          <img
+            src="/doctor.png"
+            alt=""
+            className="absolute h-auto w-full left-1/2 bottom-[9vh] -translate-x-1/2 z-10"
+          />
+          <img
+            src="/hero_backdrop.png"
+            alt=""
+            className="absolute w-[90%] left-1/2 bottom-[9vh] -translate-x-1/2 z-0"
+          />
         </div>
       </div>
+      <div className="text-center mb-8">
+        <span className="text-indigo-500 text-5xl uppercase tracking-wider font-bold">
+          Testimonials
+        </span>
+        <h2 className="text-2xl font-semibold pt-2 pb-10">
+          Happy Clients & Feedbacks
+        </h2>
+      </div>
+      <Slider />
     </>
   );
 }
