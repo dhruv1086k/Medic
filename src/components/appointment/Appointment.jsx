@@ -11,12 +11,12 @@ export default function AppointmentSection() {
             <br />
             consectetur
           </h2>
-          <p className="text-gray-600 mt-4 w-[90%]">
+          <p className="text-gray-600 mt-4 w-[90%] max-lg:w-full max-lg:px-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
             nonumy eirmod tempor Lorem ipsum dolor sit amet consectetur
             adipiscing elitr.
           </p>
-          <div className="mt-5">
+          <div className="mt-5 max-lg:mb-5">
             <h4 className="text-xl text-gray-800 font-bold">Address</h4>
             <p className="text-gray-600">
               439 Main St

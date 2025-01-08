@@ -108,7 +108,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#appointment"
-                  className="text-white bg-indigo-500 px-5 py-1 rounded-md hover:bg-indigo-600"
+                  className="text-white bg-indigo-500 px-5 py-2 rounded-md hover:bg-indigo-600"
                 >
                   Book Now
                 </a>

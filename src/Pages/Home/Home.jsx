@@ -39,7 +39,7 @@ export default function Home() {
       content: "Breaking the Stigma: Mental Health in India",
       author: "Dr. Rashmi",
       img: "/Cards/img5.webp",
-    }
+    },
   ];
 
   return (
@@ -58,13 +58,11 @@ export default function Home() {
             laboriosam odio at eaque provident enim voluptate? Laboriosam
             fugiat, sapiente voluptas atque beatae omnis.
           </h5>
-          <div className="flex justify-center items-center">
-            <a href="#appointment">
-              <button className="bg-indigo-500 text-white py-3 px-5 rounded hover:bg-indigo-600">
-                Book Appointment
-              </button>
-            </a>
-          </div>
+          <a href="#appointment">
+            <button className="bg-indigo-500 text-white py-3 px-5 rounded hover:bg-indigo-600">
+              Book Appointment
+            </button>
+          </a>
 
           {/* bottom stip */}
           <div className="max-lg:hidden stripParent overflow-hidden rounded-xl flex gap-2 w-full absolute bottom-0 left-0 max-lg:w-1/2 max-md:w-[80%]">
@@ -146,7 +144,7 @@ export default function Home() {
         <h2 className="text-4xl font-bold text-indigo-500">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-500 mt-2 max-sm:px-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
           nonumy eirmod tempor Lorem.
         </p>
