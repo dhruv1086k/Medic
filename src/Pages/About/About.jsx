@@ -3,8 +3,8 @@ import AchievementCards from "../../components/AchievementCard/Achievement";
 export default function AboutSection() {
   return (
     <>
-      <div className="w-full h-screen flex px-36">
-        <div className="w-1/2 h-full pt-32">
+      <div className="w-full h-screen max-lg:h-auto flex px-36 max-xl:px-24 max-md:px-5 max-lg:flex-col-reverse max-lg:mt-[15vh]">
+        <div className="w-1/2 h-full pt-32 max-lg:pt-0 max-lg:w-full max-lg:h-auto max-lg:text-center max-lg:mt-5">
           <h4 className="text-indigo-500 text-xl font-bold">
             Dr. Rashmi Bajaj
           </h4>
@@ -36,13 +36,14 @@ export default function AboutSection() {
             Read More
           </a>
         </div>
-        <div className="w-1/2 h-full flex justify-center items-center relative">
-          <div className="w-96 h-96 border-2 border-indigo-500 z-0 absolute left-1/2 top-1/2 -translate-x-[40%] -translate-y-[60%]"></div>
-          <img src="/rashmi.webp" className="w-96 h-96 relative z-10" alt="" />
+        <div className="w-1/2 h-full flex justify-center items-center max-xl:justify-end max-lg:w-full max-lg:h-auto max-lg:justify-center">
+          <img src="/rashmi.webp" className="w-96 h-96 max-[400px]:w-full max-[400px]:h-auto z-10 rounded-xl" alt="" />
         </div>
       </div>
-      <div>
-        <h1 className="text-5xl font-bold text-center my-4 text-indigo-500">Achievements</h1>
+      <div className="max-[1110px]:mt-24">
+        <h1 className="text-5xl font-bold text-center my-4 text-indigo-500">
+          Achievements
+        </h1>
         <AchievementCards />
       </div>
     </>
