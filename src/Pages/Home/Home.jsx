@@ -99,7 +99,7 @@ export default function Home() {
           <img
             src="/doctor.png"
             alt=""
-            className="h-auto w-[80%] rounded-3xl max-lg:w-[50%]"
+            className="h-auto w-[80%] rounded-3xl max-lg:w-[50%] max-sm:w-full"
           />
         </div>
       </div>

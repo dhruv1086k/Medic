@@ -3,14 +3,14 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-blue-300 pt-10 rounded-t-xl">
-      <div className="max-w-7xl mx-auto sm:px-6 py-8">
-        <div className="flex">
-          <div className="w-1/3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        <div className="flex max-sm:flex-col max-sm:gap-10">
+          <div className="w-1/3 max-sm:w-full max-sm:text-center">
             <h1 className="text-5xl font-bold">Mental Health Space</h1>
             <h5 className="text-xl font-semibold text-gray-500">Dr. Rashmi</h5>
           </div>
-          <div className="flex w-2/3">
-            <ul className="w-1/2 text-center">
+          <div className="flex w-2/3 max-sm:w-full">
+            <ul className="w-1/2 text-center max-sm:text-left">
               <h3 className="text-xl font-bold uppercase">Others</h3>
               <li className="my-4">
                 <a href="#" className="text-gray-500 font-medium hover:text-indigo-600">
@@ -46,7 +46,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="flex justify-start space-x-6 mt-8">
+        <div className="flex justify-start space-x-6 mt-8 max-sm:justify-center">
           <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
