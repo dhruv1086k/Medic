@@ -2,6 +2,10 @@ import AppointmentSection from "../../components/appointment/Appointment";
 import Cards from "../../components/Cards/Cards";
 import FAQSection from "../../components/FAQ/Faq";
 import Slider from "../../components/testiSlider/Slider";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 export default function Home() {
   // article cards data
@@ -35,29 +39,20 @@ export default function Home() {
       content: "Breaking the Stigma: Mental Health in India",
       author: "Dr. Rashmi",
       img: "/Cards/img5.webp",
-    },
-    {
-      head: "Mental Health",
-      content: "Breaking the Stigma: Mental Health in India",
-      author: "Dr. Rashmi",
-      img: "/Cards/img5.webp",
-    },
-    {
-      head: "Mental Health",
-      content: "Breaking the Stigma: Mental Health in India",
-      author: "Dr. Rashmi",
-      img: "/Cards/img5.webp",
-    },
+    }
   ];
 
   return (
     <>
-      <div id="home" className="flex w-full h-screen px-32">
-        <div className="w-1/2 h-full relative">
-          <h1 className="text-5xl mt-60 poppins font-medium leading-tight">
+      <div
+        id="home"
+        className="flex w-full h-screen px-32 max-xl:px-16 max-lg:mt-[10vh] max-lg:flex-col-reverse max-lg:w-full max-lg:h-auto"
+      >
+        <div className="w-1/2 max-lg:w-full h-full relative max-lg:text-center">
+          <h1 className="text-5xl mt-60 max-lg:mt-0 max-md:text-3xl poppins font-medium leading-tight">
             Complete Health Care Solution for Everyone
           </h1>
-          <h5 className="text-base mt-8 mb-10">
+          <h5 className="text-base max-md:text-sm mt-8 mb-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi
             minima pariatur laudantium nihil laborum labore natus. Fugit
             laboriosam odio at eaque provident enim voluptate? Laboriosam
@@ -72,23 +67,29 @@ export default function Home() {
           </div>
 
           {/* bottom stip */}
-          <div className="stripParent overflow-hidden rounded-xl flex gap-2 w-auto relative top-44 left-0">
-            <div className="first w-[100px] rounded-xl bg-indigo-500 text-white flex justify-center items-center text-4xl z-10 hover-trigger">
+          <div className="max-lg:hidden stripParent overflow-hidden rounded-xl flex gap-2 w-full absolute bottom-0 left-0 max-lg:w-1/2 max-md:w-[80%]">
+            <div className="first w-[100px] rounded-xl bg-indigo-500 text-white flex justify-center items-center text-4xl z-10 hover-trigger max-lg:text-2xl">
               &#10148;
             </div>
-            <div className="second w-[100%] overflow-hidden rounded-xl bg-indigo-500 text-white flex justify-between p-2 px-5 transition-transform duration-500 -translate-x-[120%]">
+            <div className="second w-[100%] overflow-hidden rounded-xl bg-indigo-500 text-white flex justify-between p-2 px-5 transition-transform duration-500 -translate-x-[120%] max-lg:gap-2">
               <div className="flex flex-col">
-                <span className="text-4xl font-bold">24/7</span>
+                <span className="text-4xl max-lg:text-2xl max-[872px]:text-xl font-bold">
+                  24/7
+                </span>
                 <span className="text-sm">Online Support</span>
               </div>
               <hr />
               <div className="flex flex-col">
-                <span className="text-4xl font-bold">100+</span>
+                <span className="text-4xl max-lg:text-2xl max-[872px]:text-xl font-bold">
+                  100+
+                </span>
                 <span className="text-sm">Doctors</span>
               </div>
               <hr />
               <div className="flex flex-col">
-                <span className="text-4xl font-bold">1M+</span>
+                <span className="text-4xl max-lg:text-2xl max-[872px]:text-xl font-bold">
+                  1M+
+                </span>
                 <span className="text-sm">Active Patients</span>
               </div>
             </div>
@@ -96,21 +97,21 @@ export default function Home() {
         </div>
 
         {/* right images-doctor */}
-        <div className="w-1/2 h-full flex justify-center items-center">
+        <div className="w-1/2 max-lg:w-full h-full flex justify-center items-center">
           <img
             src="/doctor.png"
             alt=""
-            className="h-auto w-[80%] rounded-3xl"
+            className="h-auto w-[80%] rounded-3xl max-lg:w-[50%]"
           />
         </div>
       </div>
 
       {/* testimonials section */}
       <div id="testimonials" className="text-center mt-24 mb-8">
-        <span className="text-indigo-500 text-5xl uppercase tracking-wider font-bold">
+        <span className="text-indigo-500 text-5xl max-xl:text-4xl uppercase tracking-wider font-bold">
           Testimonials
         </span>
-        <h2 className="text-2xl font-semibold pt-2 pb-10">
+        <h2 className="text-2xl max-xl:text-xl font-semibold pt-2 pb-10">
           Happy Clients & Feedbacks
         </h2>
       </div>
@@ -120,17 +121,17 @@ export default function Home() {
 
       {/* article section */}
       <div className="text-center mb-8 mt-10">
-        <span className="text-indigo-500 text-5xl uppercase tracking-wider font-bold">
+        <span className="text-indigo-500 text-5xl max-xl:text-4xl uppercase tracking-wider font-bold">
           Dr. Rashmi's Articles
         </span>
-        <h2 className="text-2xl font-semibold pt-2 pb-10 text-gray-500">
-          on notion
+        <h2 className="text-2xl max-xl:text-xl font-semibold pt-2 pb-10 text-gray-500">
+          On Notion
         </h2>
       </div>
 
       {/* article cards */}
-      <div className="px-10 flex flex-wrap justify-center items-center gap-10">
-        {CardData?.map((item) => (
+      <div className="px-10 max-sm:px-0 flex flex-wrap justify-center items-center gap-10">
+        {CardData?.map((item, index) => (
           <Cards
             head={item.head}
             img={item.img}
