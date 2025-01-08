@@ -25,10 +25,10 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all rounded-b-2xl py-5 duration-300 ${
+        className={`fixed bg-[#dfdff0] top-0 left-0 w-full z-50 transition-all rounded-b-2xl py-5 duration-300 ${
           isScrolled
-            ? "bg-gray-900 shadow-xl shadow-gray-500"
-            : "bg-transparent"
+            ? "md:bg-gray-900 shadow-xl shadow-gray-500"
+            : "md:bg-[#dfdff0]"
         }`}
       >
         <div className="container mx-auto flex justify-between items-center px-6 max-lg:flex-col">
@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link
               to="/"
               className={`text-3xl max-lg:text-2xl max-sm:text-xl font-bold ${
-                isScrolled ? "text-white" : "text-black"
+                isScrolled ? "md:text-white" : "md:text-gray-800"
               }`}
             >
               Mental Health Space
@@ -48,9 +48,9 @@ const Navbar = () => {
               className="max-md:block hidden"
             >
               {isMenuOpen ? (
-                <XIcon className="w-6 h-6 text-gray-800" />
+                <XIcon className="w-6 h-6 text-gray-900" />
               ) : (
-                <MenuIcon className="w-6 h-6 text-gray-800" />
+                <MenuIcon className="w-6 h-6 text-gray-900" />
               )}
             </button>
           </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div
             id="mainListDiv"
-            className={`main_list transition-all duration-300 max-md:absolute max-md:left-0 max-md:w-full max-md:bg-[#dfdff0] max-md:pb-10 max-md:mt-[10vh] ${
+            className={`main_list transition-all duration-300 max-md:absolute max-md:left-0 max-md:w-full max-md:bg-[#dfdff0] max-md:pb-10 max-md:mt-[5vh] ${
               isMenuOpen
                 ? "max-md:opacity-100 max-md:visible max-md:top-0 z-10"
                 : "max-md:opacity-0 max-md:invisible max-md:-top-[1000%]"
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <Link
                   to="/about"
                   className={`hover:text-indigo-600 font-medium ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrolled ? "md:text-white" : "md:text-gray-800"
                   }`}
                 >
                   About
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <a
                   href="https://medium.com/@rashmi.psychology"
                   className={`hover:text-indigo-600 font-medium ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrolled ? "md:text-white" : "md:text-gray-800"
                   }`}
                 >
                   Articles
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <a
                   href="#testimonials"
                   className={`hover:text-indigo-600 font-medium ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrolled ? "md:text-white" : "md:text-gray-800"
                   }`}
                 >
                   Testimonials
@@ -99,7 +99,7 @@ const Navbar = () => {
                 <a
                   href="#faq"
                   className={`hover:text-indigo-600 font-medium ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrolled ? "md:text-white" : "md:text-gray-800"
                   }`}
                 >
                   FAQ's
